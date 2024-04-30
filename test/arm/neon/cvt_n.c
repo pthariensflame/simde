@@ -4,8 +4,6 @@
 #include "../../../simde/arm/neon/cvt_n.h"
 #include "../../../simde/arm/neon/dup_n.h"
 
-/* Disabled until we fix the FCVTZS/FCVTMS/FCVTPS/FCVTNS family intrinsics
- * https://github.com/simd-everywhere/simde/issues/1099
 static int
 test_simde_vcvth_n_s16_f16 (SIMDE_MUNIT_TEST_ARGS) {
 #if 1
@@ -312,7 +310,6 @@ test_simde_vcvth_n_s64_f16 (SIMDE_MUNIT_TEST_ARGS) {
   return 1;
 #endif
 }
-*/
 
 static int
 test_simde_vcvth_n_u16_f16 (SIMDE_MUNIT_TEST_ARGS) {
@@ -375,8 +372,6 @@ test_simde_vcvth_n_u16_f16 (SIMDE_MUNIT_TEST_ARGS) {
 #endif
 }
 
-/* Disabled until we fix the FCVTZS/FCVTMS/FCVTPS/FCVTNS family intrinsics
- * https://github.com/simd-everywhere/simde/issues/1099
 static int
 test_simde_vcvth_n_u32_f16 (SIMDE_MUNIT_TEST_ARGS) {
 #if 1
@@ -538,7 +533,6 @@ test_simde_vcvth_n_u64_f16 (SIMDE_MUNIT_TEST_ARGS) {
   return 1;
 #endif
 }
-*/
 
 static int
 test_simde_vcvth_n_f16_s16 (SIMDE_MUNIT_TEST_ARGS) {
@@ -603,8 +597,6 @@ test_simde_vcvth_n_f16_s16 (SIMDE_MUNIT_TEST_ARGS) {
 #endif
 }
 
-/* Disabled until we fix the FCVTZS/FCVTMS/FCVTPS/FCVTNS family intrinsics
- * https://github.com/simd-everywhere/simde/issues/1099
 static int
 test_simde_vcvth_n_f16_s32 (SIMDE_MUNIT_TEST_ARGS) {
 #if 1
@@ -800,7 +792,6 @@ test_simde_vcvth_n_f16_s64 (SIMDE_MUNIT_TEST_ARGS) {
   return 1;
 #endif
 }
-*/
 
 static int
 test_simde_vcvth_n_f16_u16 (SIMDE_MUNIT_TEST_ARGS) {
@@ -865,8 +856,6 @@ test_simde_vcvth_n_f16_u16 (SIMDE_MUNIT_TEST_ARGS) {
 #endif
 }
 
-/* Disabled until we fix the FCVTZS/FCVTMS/FCVTPS family intrinsics
- * https://github.com/simd-everywhere/simde/issues/1099
 static int
 test_simde_vcvth_n_f16_u32 (SIMDE_MUNIT_TEST_ARGS) {
 #if 1
@@ -1062,7 +1051,6 @@ test_simde_vcvth_n_f16_u64 (SIMDE_MUNIT_TEST_ARGS) {
   return 1;
 #endif
 }
-*/
 
 static int
 test_simde_vcvts_n_s32_f32 (SIMDE_MUNIT_TEST_ARGS) {
@@ -1765,8 +1753,6 @@ test_simde_vcvtd_n_f64_u64 (SIMDE_MUNIT_TEST_ARGS) {
 #endif
 }
 
-/* Disabled until we fix the FCVTZS/FCVTMS/FCVTPS/FCVTNS family intrinsics
- * https://github.com/simd-everywhere/simde/issues/1099
 static int
 test_simde_vcvt_n_s16_f16 (SIMDE_MUNIT_TEST_ARGS) {
 #if 1
@@ -1827,7 +1813,6 @@ test_simde_vcvt_n_s16_f16 (SIMDE_MUNIT_TEST_ARGS) {
   return 1;
 #endif
 }
-*/
 
 static int
 test_simde_vcvt_n_s32_f32 (SIMDE_MUNIT_TEST_ARGS) {
@@ -2160,8 +2145,6 @@ test_simde_vcvt_n_u64_f64 (SIMDE_MUNIT_TEST_ARGS) {
 #endif
 }
 
-/* Disabled until we fix the FCVTZS/FCVTMS/FCVTPS/FCVTNS family intrinsics
- * https://github.com/simd-everywhere/simde/issues/1099
 static int
 test_simde_vcvtq_n_s16_f16 (SIMDE_MUNIT_TEST_ARGS) {
 #if 1
@@ -2222,7 +2205,6 @@ test_simde_vcvtq_n_s16_f16 (SIMDE_MUNIT_TEST_ARGS) {
   return 1;
 #endif
 }
-*/
 
 static int
 test_simde_vcvtq_n_s32_f32 (SIMDE_MUNIT_TEST_ARGS) {
@@ -3296,19 +3278,19 @@ test_simde_vcvt_n_f32_u32 (SIMDE_MUNIT_TEST_ARGS) {
 
 
 SIMDE_TEST_FUNC_LIST_BEGIN
-//SIMDE_TEST_FUNC_LIST_ENTRY(vcvth_n_s16_f16)
-//SIMDE_TEST_FUNC_LIST_ENTRY(vcvth_n_s32_f16)
-//SIMDE_TEST_FUNC_LIST_ENTRY(vcvth_n_s64_f16)
+SIMDE_TEST_FUNC_LIST_ENTRY(vcvth_n_s16_f16)
+SIMDE_TEST_FUNC_LIST_ENTRY(vcvth_n_s32_f16)
+SIMDE_TEST_FUNC_LIST_ENTRY(vcvth_n_s64_f16)
 SIMDE_TEST_FUNC_LIST_ENTRY(vcvth_n_u16_f16)
-//SIMDE_TEST_FUNC_LIST_ENTRY(vcvth_n_u32_f16)
-//SIMDE_TEST_FUNC_LIST_ENTRY(vcvth_n_u64_f16)
+SIMDE_TEST_FUNC_LIST_ENTRY(vcvth_n_u32_f16)
+SIMDE_TEST_FUNC_LIST_ENTRY(vcvth_n_u64_f16)
 
 SIMDE_TEST_FUNC_LIST_ENTRY(vcvth_n_f16_s16)
-//SIMDE_TEST_FUNC_LIST_ENTRY(vcvth_n_f16_s32)
-//SIMDE_TEST_FUNC_LIST_ENTRY(vcvth_n_f16_s64)
+SIMDE_TEST_FUNC_LIST_ENTRY(vcvth_n_f16_s32)
+SIMDE_TEST_FUNC_LIST_ENTRY(vcvth_n_f16_s64)
 SIMDE_TEST_FUNC_LIST_ENTRY(vcvth_n_f16_u16)
-//SIMDE_TEST_FUNC_LIST_ENTRY(vcvth_n_f16_u32)
-//SIMDE_TEST_FUNC_LIST_ENTRY(vcvth_n_f16_u64)
+SIMDE_TEST_FUNC_LIST_ENTRY(vcvth_n_f16_u32)
+SIMDE_TEST_FUNC_LIST_ENTRY(vcvth_n_f16_u64)
 
 SIMDE_TEST_FUNC_LIST_ENTRY(vcvts_n_s32_f32)
 SIMDE_TEST_FUNC_LIST_ENTRY(vcvts_n_u32_f32)
@@ -3319,7 +3301,7 @@ SIMDE_TEST_FUNC_LIST_ENTRY(vcvtd_n_u64_f64)
 SIMDE_TEST_FUNC_LIST_ENTRY(vcvtd_n_f64_s64)
 SIMDE_TEST_FUNC_LIST_ENTRY(vcvtd_n_f64_u64)
 
-//SIMDE_TEST_FUNC_LIST_ENTRY(vcvt_n_s16_f16)
+SIMDE_TEST_FUNC_LIST_ENTRY(vcvt_n_s16_f16)
 SIMDE_TEST_FUNC_LIST_ENTRY(vcvt_n_s32_f32)
 SIMDE_TEST_FUNC_LIST_ENTRY(vcvt_n_s64_f64)
 
@@ -3341,7 +3323,7 @@ SIMDE_TEST_FUNC_LIST_ENTRY(vcvtq_n_f32_u32)
 SIMDE_TEST_FUNC_LIST_ENTRY(vcvtq_n_f64_s64)
 SIMDE_TEST_FUNC_LIST_ENTRY(vcvtq_n_f64_u64)
 
-//SIMDE_TEST_FUNC_LIST_ENTRY(vcvtq_n_s16_f16)
+SIMDE_TEST_FUNC_LIST_ENTRY(vcvtq_n_s16_f16)
 SIMDE_TEST_FUNC_LIST_ENTRY(vcvtq_n_s32_f32)
 SIMDE_TEST_FUNC_LIST_ENTRY(vcvtq_n_s64_f64)
 
